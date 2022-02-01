@@ -12,7 +12,7 @@
           placeholder="описание"
           ></my-input>
           <my-button
-          style="align-self: flex-end; margin-top: 15px"  
+           style="margin-top: 15px"
           @click="createPost"
           >
           Создать
