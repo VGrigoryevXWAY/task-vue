@@ -37,6 +37,7 @@ data() {
     return {
         posts: [],
         dialogVisible:false,
+        isPostsLoading: false,
     }
  },
  methods: {
