@@ -8,4 +8,4 @@ components.forEach(component => {
 })
     
 
-app.mount('#app')
+app.mount('#app');

@@ -1,12 +1,18 @@
 <template>
   <div class="app">
       <h1>Страница с постами</h1>
-      <my-button
-      @click="showDialog"
-      style="margin: 15px 0;"
-      >
-      Создать пост
-      </my-button>
+      <div class="app_btns">
+        <my-button
+        @click="showDialog"
+        >
+        Создать пост
+        </my-button>
+        <my-select 
+        v-model="selectedSort"
+        :options="sortOptions"
+        >
+        </my-select>
+        </div>
       <my-dialog v-model:show="dialogVisible">
         <post-form       
         @create="createPost"
@@ -38,6 +44,11 @@ data() {
         posts: [],
         dialogVisible:false,
         isPostsLoading: false,
+        selectedSort:'',
+        sortOptions: [
+            {value: 'title', name: 'По названию'},
+            {value: 'body', name: 'По содержимому'},
+        ]
     }
  },
  methods: {
@@ -74,9 +85,14 @@ data() {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-};
+}
 
 .app {
     padding: 20px;
+}
+.app_btns {
+    margin: 15px 0;
+    display: flex;
+    justify-content: space-between;
 }
 </style>
