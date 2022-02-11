@@ -4,9 +4,9 @@
 
 <script>
 export default {
-  name:'my-input',
+  name: 'my-input',
   props: {
-    modelValue: [ String, Number]
+    modelValue: [String, Number]
   },
   methods: {
     updateInput(event) {
@@ -17,10 +17,11 @@ export default {
 </script>
 
 <style scoped>
-  .input {
-    width: 100%;
-    border: 1px solid teal;
-    padding: 10px 15px;
-    margin-top: 15px;
+.input {
+  width: 100%;
+  border: 1px solid teal;
+  padding: 10px 15px;
+  margin-top: 15px;
 }
+
 </style>
